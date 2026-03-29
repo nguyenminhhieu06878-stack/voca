@@ -390,23 +390,23 @@ const PracticePageNew = () => {
   // Mode Selection View
   if (currentView === 'mode-selection') {
     return (
-      <div className="py-8">
-        <div className="mb-8 text-center">
-          <h1 className="text-4xl font-bold text-neutral-900 mb-4">
+      <div className="py-4 sm:py-6">
+        <div className="mb-4 sm:mb-6 text-center">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900 mb-2 sm:mb-4">
             🎯 Practice Pronunciation
           </h1>
-          <p className="text-xl text-neutral-600">
+          <p className="text-base sm:text-xl text-neutral-600 px-2">
             Choose what you want to practice
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {/* Words Practice */}
           <button
             onClick={() => handleModeSelect('words')}
-            className="card hover:shadow-xl transition-all duration-300 hover:scale-105 text-center p-8"
+            className="card hover:shadow-xl transition-all duration-300 hover:scale-105 text-center p-4 sm:p-6 lg:p-8"
           >
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-2 sm:mb-4">
               Từ đơn
             </h2>
             <p className="text-neutral-600 mb-4">
@@ -420,9 +420,9 @@ const PracticePageNew = () => {
           {/* Phrases Practice */}
           <button
             onClick={() => handleModeSelect('phrases')}
-            className="card hover:shadow-xl transition-all duration-300 hover:scale-105 text-center p-8"
+            className="card hover:shadow-xl transition-all duration-300 hover:scale-105 text-center p-4 sm:p-6 lg:p-8"
           >
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-2 sm:mb-4">
               Cụm từ & Câu
             </h2>
             <p className="text-neutral-600 mb-4">

@@ -107,26 +107,29 @@ const HomePage = () => {
               </p>
 
               {user ? (
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link to="/practice" className="btn-primary btn-lg inline-flex items-center">
-                    <Mic className="mr-2 h-5 w-5" />
-                    Continue Learning
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 lg:gap-4 justify-center lg:justify-start">
+                  <Link to="/practice" className="group relative overflow-hidden bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center">
+                    <span className="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <Mic className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4 lg:h-5 lg:w-5 relative z-10" />
+                    <span className="relative z-10 text-xs sm:text-sm lg:text-base">Continue Learning</span>
+                    <ArrowRight className="ml-1.5 sm:ml-2 h-3.5 w-3.5 sm:h-4 sm:w-4 lg:h-5 lg:w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link to="/quiz" className="btn-secondary btn-lg inline-flex items-center">
-                    <Trophy className="mr-2 h-5 w-5" />
-                    Take Quiz
+                  <Link to="/quiz" className="group bg-white text-primary-600 px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-lg sm:rounded-xl font-semibold border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg">
+                    <Trophy className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
+                    <span className="text-xs sm:text-sm lg:text-base">Take Quiz</span>
                   </Link>
                 </div>
               ) : (
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link to="/register" className="btn-primary btn-lg inline-flex items-center">
-                    <Play className="mr-2 h-5 w-5" />
-                    Start Learning Free
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                <div className="hidden sm:flex flex-col sm:flex-row gap-2.5 sm:gap-3 lg:gap-4 justify-center lg:justify-start">
+                  <Link to="/register" className="group relative overflow-hidden bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center">
+                    <span className="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <Play className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4 lg:h-5 lg:w-5 relative z-10" />
+                    <span className="relative z-10 text-xs sm:text-sm lg:text-base whitespace-nowrap">Start Learning Free</span>
+                    <ArrowRight className="ml-1.5 sm:ml-2 h-3.5 w-3.5 sm:h-4 sm:w-4 lg:h-5 lg:w-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link to="/login" className="btn-secondary btn-lg inline-flex items-center">
-                    Sign In
+                  <Link to="/login" className="group bg-white text-primary-600 px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-lg sm:rounded-xl font-semibold border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg">
+                    <span className="text-xs sm:text-sm lg:text-base">Sign In</span>
+                    <ArrowRight className="ml-1.5 sm:ml-2 h-3.5 w-3.5 sm:h-4 sm:w-4 lg:h-5 lg:w-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all -ml-2 group-hover:ml-1.5 sm:group-hover:ml-2" />
                   </Link>
                 </div>
               )}

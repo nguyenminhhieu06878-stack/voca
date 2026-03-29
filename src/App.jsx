@@ -5,6 +5,7 @@ import AdminLayout from './components/AdminLayout'
 import PublicNavbar from './components/PublicNavbar'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
+import AuthCallback from './pages/AuthCallback'
 import HomePage from './pages/HomePage'
 import PracticePage from './pages/PracticePage'
 import QuizPage from './pages/QuizPage'
@@ -39,6 +40,7 @@ function App() {
         } />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/auth/callback" element={<AuthCallback />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     )
