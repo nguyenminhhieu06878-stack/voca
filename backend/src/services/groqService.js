@@ -127,7 +127,7 @@ Example errors to identify:
       const response = await axios.post(
         `${this.baseURL}/chat/completions`,
         {
-          model: 'llama-3.1-70b-versatile',
+          model: 'llama-3.3-70b-versatile', // Updated to current supported model
           messages: [
             {
               role: 'user',

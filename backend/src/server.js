@@ -2,10 +2,15 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
-const passport = require('./config/passport');
 
-// Load environment variables
+// Load environment variables FIRST
 dotenv.config();
+
+console.log('🔧 Loading passport configuration...');
+console.log('ENV check - GOOGLE_CLIENT_ID:', process.env.GOOGLE_CLIENT_ID ? 'SET' : 'NOT SET');
+console.log('ENV check - GOOGLE_CLIENT_SECRET:', process.env.GOOGLE_CLIENT_SECRET ? 'SET' : 'NOT SET');
+const passport = require('./config/passport');
+console.log('✅ Passport configuration loaded');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
